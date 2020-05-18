@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="about_styles.css" />
+    <script
+      src="https://kit.fontawesome.com/bb1eafe8ab.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>About</title>
+  </head>
+  <body>
+    <div class="footer">
+      <div class="inner_footer">
+        <div class="logo_container">
+          <img src="./images/logo.png" alt="logo for footer" />
+        </div>
+        <div class="footer_third">
+          <h1>Need Help?</h1>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy & Policy</a>
+        </div>
+        <div class="footer_third">
+          <h1>More</h1>
+          <a href="#">Brouchures</a>
+          <a href="#">Purchase</a>
+        </div>
+        <div class="footer_third">
+          <h1>Follow us</h1>
+          <li>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+          </li>
+          <span>
+            © Coffee Express Inc.<br />
+            Toronto - Canada<br />
+            Unit 223, The Coffee Factory<br />
+            82 Young Street<br />
+            L8P N8Q
+          </span>
+        </div>
+      </div>
+    </div>
+    <header>
+      <h1 class="logo">Coffee Express</h1>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+    </header>
+    <div class="content">
+      <div class="vertical-center">
+        <h2>
+          About Us
+        </h2>
+        <div class="line"></div>
+        <p>
+          Founded in 1966 by Stephen Hillenburg in Toronto, Canada, Coffee
+          Express introduced Canada to its darker roasted Arabica coffee in
+          blends including French Roast and grades appropriate for espresso
+          drinks. Coffee Express offers freshly roasted beans, brewed coffee and
+          espresso beverages, as well as bottled cold brew.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem quos
+          eveniet neque, amet sed animi minima temporibus quia est ullam tempore
+          sint consequuntur esse ducimus repellat dolore. Numquam, repellat
+          porro! Repellendus dolores corrupti dolore eligendi aliquid iusto
+          distinctio aut quaerat iste culpa deserunt voluptatibus, atque ad
+          consectetur veritatis nihil tempore incidunt enim ut sequi. Tempore
+          accusantium impedit, neque debitis corrupti provident doloribus
+          ratione animi! Tenetur autem accusantium laudantium ullam, placeat
+          aspernatur veniam nobis eum.
+        </p>
+        <h2>How We Started</h2>
+        <div class="line-2"></div>
+      </div>
+    </div>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="./images/slider_img_1.jpg" style="width: 100%;" />
+        <div class="text">Toronto, Canada</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="./images/slider_img_2.jpg" style="width: 100%;" />
+        <div class="text">Specialty Coffee</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="./images/slider_img_3.jpg" style="width: 100%;" />
+        <div class="text">Oakville, Ontario</div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+    <div style="text-align: center;">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
+</html>
