@@ -2,6 +2,55 @@ body {
   overflow-x: hidden;
 }
 
+/* contact section start */
+
+.content .contact-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.content .contact-form-text {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  border: 0;
+  background: rgb(202, 202, 202);
+  padding: 20px 40px;
+  outline: none;
+  color: white;
+  transition: 0.5s;
+}
+
+/* border color when typing in contact boxes
+.contact-form-text:focus {
+  box-shadow: 0 0 10px 4px rgba(117, 78, 33);
+}
+*/
+
+.content textarea.contact-form-text {
+  resize: none;
+  height: 120px;
+}
+
+.content .contact-form-btn {
+  float: left;
+  border: 0;
+  background: rgba(117, 78, 33);
+  color: #fff;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.content .contact-form-btn:hover {
+  background: rgb(92, 61, 25);
+}
+/* contact section end */
+
 body {
   margin: 0;
   background: rgb(34, 34, 34);
@@ -51,22 +100,13 @@ header {
   text-shadow: 2px 2px 8px #111;
 }
 
-.content p {
-  text-align: center;
+.content h3 {
+  font-weight: 500;
+  font-size: 25px;
   color: rgb(218, 218, 218);
-
-  font-size: 26px;
-  word-spacing: 150px;
-  position: relative;
-  top: 25px;
-}
-
-#googleMap {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  top: 100px;
+  text-align: center;
+  letter-spacing: 5px;
+  text-shadow: 2px 2px 8px #111;
 }
 
 @media screen and (min-width: 849px) {

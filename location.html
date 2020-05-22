@@ -8,83 +8,86 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="location_styles.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="navbar.css" />
     <title>Location</title>
   </head>
   <body>
-    <div class="footer">
-      <div class="inner_footer">
-        <div class="logo_container">
-          <img src="./images/logo.png" alt="logo for footer" />
-        </div>
-        <div class="footer_third">
-          <h1>Need Help?</h1>
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Privacy & Policy</a>
-        </div>
-        <div class="footer_third">
-          <h1>More</h1>
-          <a href="#">Brouchures</a>
-          <a href="#">Purchase</a>
-        </div>
-        <div class="footer_third">
-          <h1>Follow us</h1>
-          <li>
-            <a href="#"><i class="fa fa-facebook"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-          </li>
-          <span>
-            © Coffee Express Inc.<br />
-            Toronto - Canada<br />
-            Unit 223, The Coffee Factory<br />
-            82 Young Street<br />
-            L8P N8Q
-          </span>
+    <div class="everything">
+      <div class="footer">
+        <div class="inner_footer">
+          <div class="logo_container">
+            <img src="./images/logo.png" alt="logo for footer" />
+          </div>
+          <div class="footer_third">
+            <h1>Need Help?</h1>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy & Policy</a>
+          </div>
+          <div class="footer_third">
+            <h1>More</h1>
+            <a href="#">Brouchures</a>
+            <a href="#">Purchase</a>
+          </div>
+          <div class="footer_third">
+            <h1>Follow us</h1>
+            <li>
+              <a href="#"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </li>
+            <span>
+              © Coffee Express Inc.<br />
+              Toronto - Canada<br />
+              Unit 223, The Coffee Factory<br />
+              82 Young Street<br />
+              L8P N8Q
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-    <header>
-      <h1 class="logo">Coffee Express</h1>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="location.html">Location</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <label for="nav-toggle" class="nav-toggle-label">
-        <span></span>
-      </label>
-    </header>
-    <div class="content">
-      <div class="vertical-center">
-        <h2>
-          Find Our Locations!
-        </h2>
-        <div class="line"></div>
-        <p>Toronto Waterloo Guelph</p>
-        <div id="googleMap" style="width: 70%; height: 400px;"></div>
+      <header>
+        <h1 class="logo">Coffee Express</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+      </header>
+      <div class="content">
+        <div class="vertical-center">
+          <h2>
+            Find Our Locations!
+          </h2>
+          <p>Toronto Waterloo Guelph</p>
+          <div id="googleMap" style="width: 75%; height: 450px;"></div>
 
-        <script>
-          function myMap() {
-            var mapProp = {
-              center: new google.maps.LatLng(51.508742, -0.12085),
-              zoom: 5,
-            };
-            var map = new google.maps.Map(
-              document.getElementById("googleMap"),
-              mapProp
-            );
-          }
-        </script>
+          <script>
+            function myMap() {
+              var mapProp = {
+                center: new google.maps.LatLng(43.653225, -79.383186),
+                zoom: 5,
+              };
+              var map = new google.maps.Map(
+                document.getElementById("googleMap"),
+                mapProp
+              );
+            }
+          </script>
 
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAY3TDct7CM5zf3oFtzZ4TGD897TTvi6hk&callback=myMap"></script>
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAY3TDct7CM5zf3oFtzZ4TGD897TTvi6hk&callback=myMap"></script>
+        </div>
       </div>
     </div>
   </body>
