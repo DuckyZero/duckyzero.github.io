@@ -90,6 +90,7 @@ body {
   background-size: cover;
   background-color: rgb(66, 66, 66);
   background-blend-mode: multiply;
+  overflow-x: hidden;
 }
 
 h1 {
